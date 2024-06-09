@@ -41,8 +41,8 @@ h3 {
   text-transform: uppercase;
 }
 
-#seconds,
-#tens {
+.seconds,
+.tens {
   font-size: 2em;
 }
 
