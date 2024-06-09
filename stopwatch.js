@@ -8,6 +8,8 @@ window.onload = function () {
   const tensHTML = document.querySelector(".tens");
 
   const startButton = document.querySelector(".js-button-start");
+  const stopButton = document.querySelector(".js-button-stop");
+  const resetButton = document.querySelector(".js-button-reset");
 
   startButton.addEventListener("click", () => {
     interval = setInterval(() => {
@@ -29,5 +31,19 @@ window.onload = function () {
         }
       }
     }, 10);
+  });
+
+  stopButton.addEventListener("click", () => {
+    clearInterval(interval);
+  });
+
+  resetButton.addEventListener("click", () => {
+    clearInterval(interval);
+
+    tens = 0;
+    seconds = 0;
+
+    tensHTML.innerHTML = "00";
+    secondsHTML.innerHTML = "00";
   });
 };
